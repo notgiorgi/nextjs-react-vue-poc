@@ -1,0 +1,163 @@
+[
+  {
+    "id": "page_01_id",
+    "title": "Page 1",
+    "url": "/page1",
+    "root": [
+      {
+        "id": "cab39b412-a415-4dc0-abb5-1e915b1393c6",
+        "type": "Section",
+        "props": {
+          "style": {
+            "backgroundColor": "skyblue"
+          }
+        },
+        "children": [
+          {
+            "id": "cac6e0f22-96cb-444d-922b-d2823450d7a2",
+            "type": "Heading",
+            "props": {
+              "element": "h1",
+              "text": "Hello this is heading",
+              "style": {
+                "fontFamily": "Lato",
+                "fontSize": "32px",
+                "backgroundColor": "salmon"
+              }
+            }
+          },
+          {
+            "id": "c53611fc4-6a92-4610-903e-bc1a5e3a17e6",
+            "type": "Custom",
+            "customComponentId": "Counter",
+            "props": {
+              "initialCount": 30
+            }
+          },
+          {
+            "id": "c3e8decbc-ae0c-4d36-a966-c318157a92fd",
+            "type": "Image",
+            "props": {
+              "src": "https://images.unsplash.com/photo-1467177942249-bb110bf12f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+              "alt": "Mountain"
+            }
+          },
+          {
+            "id": "c41a1292d-4228-4b37-ae66-6e37055ecd8b",
+            "type": "Section",
+            "props": {
+              "style": {
+                "border": "1px solid red"
+              }
+            },
+            "children": [
+              {
+                "id": "c29500de0-62e8-43ba-94c4-0f207d3234cc",
+                "type": "Custom",
+                "customComponentId": "WeirdTable"
+              },
+              {
+                "id": "c24944bde-2026-4cee-aa51-9a9fc6e63cc0",
+                "type": "Text",
+                "props": {
+                  "element": "span",
+                  "text": "I'm nested in Section > Section > Text!",
+                  "style": {
+                    "fontFamily": "comic-sans"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cc7912bb9-3d9a-4f93-ae36-ea453a974cc0",
+        "type": "Button",
+        "props": {
+          "text": "I'm a button component!",
+          "style": {
+            "backgroundColor": "salmon",
+            "color": "white",
+            "height": "48px",
+            "padding": "16px",
+            "cursor": "pointer"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "page_02_id",
+    "title": "Page 2",
+    "url": "/page2",
+    "root": [
+      {
+        "id": "cc7912bb9-3d9a-4f93-ae36-ea453a974cc0",
+        "type": "Heading",
+        "props": {
+          "element": "h1",
+          "text": "I'm a smaller page",
+          "style": {
+            "backgroundColor": "salmon",
+            "color": "white",
+            "height": "48px",
+            "padding": "16px",
+            "cursor": "pointer"
+          }
+        }
+      },
+      {
+        "id": "c53623fc4-6a92-4610-903e-bc1a5e3a17e6",
+        "type": "Custom",
+        "customComponentId": "WithDropzones",
+        "props": {},
+        "dropzones": {
+          "first": [
+            {
+              "id": "c41a1232f2d-4228-4b37-ae66-6e37055ecd8b",
+              "type": "Section",
+              "props": {
+                "style": {
+                  "border": "1px solid red"
+                }
+              },
+              "children": [
+                {
+                  "id": "c2950s0de0-62e8-43ba-94c4-0f207d3234cc",
+                  "type": "Custom",
+                  "customComponentId": "WeirdTable"
+                },
+                {
+                  "id": "c2492f44bde-2026-4cee-aa51-9a9fc6e63cc0",
+                  "type": "Text",
+                  "props": {
+                    "element": "span",
+                    "text": "I'm a standard (react) element rendered inside vue custom component",
+                    "style": {
+                      "fontFamily": "comic-sans"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "second": [
+            {
+              "id": "cac6e023222-96cb-444d-922b-d2823450d7a2",
+              "type": "Heading",
+              "props": {
+                "element": "h1",
+                "text": "This is heading rendered in second dropzone of custom component",
+                "style": {
+                  "fontFamily": "Lato",
+                  "fontSize": "32px"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
