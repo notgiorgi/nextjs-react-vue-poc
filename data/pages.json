@@ -159,5 +159,58 @@
         }
       }
     ]
+  },
+  {
+    "id": "page_03_id",
+    "title": "Page 3",
+    "url": "/page3",
+    "products": [
+      "20203202302",
+      "10103030202"
+    ],
+    "root": [
+      {
+        "id": "c24944bde-2026-4cee-aa51-9a9fc6e63cc1",
+        "type": "ProductBox",
+        "props": {
+          "productId": "20203202302"
+        },
+        "children": [
+          {
+            "id": "c53611fc4-6a92-4610-923E-bc1a5e3a17e6",
+            "type": "ProductTitle",
+            "props": {
+              "element": "h1"
+            }
+          },
+          {
+            "id": "cab39b412d-a412-4dc0-abZb5-1e915b1393c6",
+            "type": "ProductPrice",
+            "props": {}
+          },
+          {
+            "id": "c24944bZdE-2026-4cee-aa51-9a9fc6e63cc1",
+            "type": "ProductBox",
+            "props": {
+              "productId": "10103030202"
+            },
+            "children": [
+              {
+                "id": "c53622fc4-6a92-4610-923E-bc1a5e3a17e6",
+                "type": "ProductTitle",
+                "props": {
+                  "element": "h1"
+                }
+              },
+              {
+                "id": "cab399412d-a412-4dc0-abZb5-1e915b1393c6",
+                "type": "ProductPrice",
+                "props": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
