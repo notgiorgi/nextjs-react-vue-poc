@@ -3,6 +3,7 @@
     "id": "page_01_id",
     "title": "Page 1",
     "url": "/page1",
+    "products": [],
     "root": [
       {
         "id": "cab39b412-a415-4dc0-abb5-1e915b1393c6",
@@ -91,6 +92,7 @@
     "id": "page_02_id",
     "title": "Page 2",
     "url": "/page2",
+    "products": [],
     "root": [
       {
         "id": "cc7912bb9-3d9a-4f93-ae36-ea453a974cc0",
