@@ -1,0 +1,13 @@
+{
+  "name": "componentTreeGenerator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "gen": "node index.js"
+  },
+  "dependencies": {
+    "@babel/node": "^7.6.2",
+    "babel-node": "^0.0.1-security"
+  }
+}
