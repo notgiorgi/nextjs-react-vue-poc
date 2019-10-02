@@ -18,6 +18,7 @@ const ComponentTreeRenderer = ({ isRoot, componentTree }) => {
               dropzones={component.dropzones}
             />
           )
+
         return (
           <ElementRenderer key={component.id} element={component} renderSubtree={renderSubtree} />
         )

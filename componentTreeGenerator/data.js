@@ -55,4 +55,21 @@ module.exports.elementTypes = [
   // { type: 'ProductBox', canHaveChildren: true },
   // { type: 'ProductPrice', canHaveChildren: false },
   // { type: 'ProductTitle', canHaveChildren: false },
+  {
+    type: 'Custom',
+    canHaveChildren: false,
+    customComponentTypes: [
+      { customComponentId: 'WeirdTable', getDefaultProps: () => ({}) },
+      { customComponentId: 'Counter', getDefaultProps: () => ({ initialCount: 30 }) },
+      {
+        customComponentId: 'WithDropzones',
+        getDefaultProps: ({ createComponentTree }) => ({
+          dropzones: {
+            first: createComponentTree(1, 3),
+            second: createComponentTree(1, 3),
+          },
+        }),
+      },
+    ],
+  },
 ]

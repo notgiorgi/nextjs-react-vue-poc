@@ -11,7 +11,6 @@ const CustomComponentRenderer = ({
   customComponentInstanceId,
   data,
   renderSubtree,
-  dropzones,
 }) => {
   const [portals, setPortals] = useState([])
 
@@ -59,13 +58,13 @@ const CustomComponentRenderer = ({
   }, [])
 
   return (
-    <>
+    <div>
       <div id={customComponentInstanceId}></div>
-      {dropzones &&
+      {data.dropzones &&
         portals.map(({ id, el, name }) => {
-          return createPortal(renderSubtree(dropzones[name]), el, id)
+          return createPortal(renderSubtree(data.dropzones[name]), el, id)
         })}
-    </>
+    </div>
   )
 }
 

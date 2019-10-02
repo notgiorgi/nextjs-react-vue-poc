@@ -18,9 +18,19 @@ module.exports.createPage = createPage
 
 function createComponentTree(maxDepth, maxSiblings) {
   return Array.apply(null, { length: maxSiblings }).map(() => {
-    const { type, getDefaultProps, canHaveChildren } = elementTypes[
+    const { type, getDefaultProps, canHaveChildren, customComponentTypes } = elementTypes[
       getRandomInt(0, elementTypes.length)
     ]
+
+    if (type === 'Custom') {
+      const { customComponentId, getDefaultProps } = customComponentTypes[
+        getRandomInt(0, customComponentTypes.length)
+      ]
+      return createCustomComponent({
+        customComponentId,
+        props: getDefaultProps({ createComponentTree }),
+      })
+    }
 
     return createElement({
       type,
@@ -34,6 +44,14 @@ function createComponentTree(maxDepth, maxSiblings) {
 function createElement(elementConfig) {
   return {
     id: createId(),
+    ...elementConfig,
+  }
+}
+
+function createCustomComponent(elementConfig) {
+  return {
+    id: createId(),
+    type: 'Custom',
     ...elementConfig,
   }
 }
